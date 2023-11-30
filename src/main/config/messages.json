@@ -1,0 +1,30 @@
+[
+  {
+    "subject": "Hello I am under the water",
+    "body": "Please help me!"
+  },
+  {
+    "subject": "Chocolate offer",
+    "body": "I will pay you $1000 for your chocolate"
+  },
+  {
+    "subject": "You won a lottery",
+    "body": "You have won a lottery, please send me your bank account number"
+  },
+  {
+    "subject": "You are fired",
+    "body": "Bye bye, it wasn't nice working with you"
+  },
+  {
+    "subject": "A plus dans le bus",
+    "body": "J'adore l'eau dans 20, 30 ans, il n'y en aura plus"
+  },
+  {
+    "subject": "DAI grade for the SMTP lab",
+    "body": "hello,\nyou got a 6 on your DAI SMTP lab,\ncongratulations!"
+  },
+  {
+    "subject": "Help",
+    "body": "Hey babe, I'm stuck at LAX I need $3000 right now!\nPlease send me your credit card information (don't forget the CCV :) )"
+  }
+]

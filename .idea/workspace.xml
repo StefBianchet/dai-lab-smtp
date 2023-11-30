@@ -5,26 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb9a81f-6e9a-49fc-b9b4-898b3d471ef3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/config/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/config/messages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/config/victims.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/AddressReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/MailManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/MailPrankster.java" afterDir="false" />
+    </list>
+    <list id="58e8c694-0fbe-42ad-a92c-ba44138b6a1f" name="Changes by mstre" comment="">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/MailPrankster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/ch/heig/dai/smtp/MailPrankster.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="6" changelist="6bb9a81f-6e9a-49fc-b9b4-898b3d471ef3" />
+        <range start1="5" end1="5" start2="8" end2="15" changelist="58e8c694-0fbe-42ad-a92c-ba44138b6a1f" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2YtO0dNRbbRmsuZQDNEtqKB2yHK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +58,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/stefa/Downloads/DAI_LABO_SMTP-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
