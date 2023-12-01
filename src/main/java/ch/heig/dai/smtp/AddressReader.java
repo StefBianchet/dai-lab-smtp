@@ -8,19 +8,32 @@ import com.google.gson.JsonObject;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class AddressReader {
-    private ArrayList<String> victims = new ArrayList<>();
+    private final ArrayList<String> victims = new ArrayList<>();
 
-    // todo: check if not null
     public AddressReader(){
         Gson gson = new Gson();
         String filename = "/src/main/config/victims.json";
+        String regexPattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+
+        Pattern pattern = Pattern.compile(regexPattern);
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("").getAbsolutePath() + filename), StandardCharsets.UTF_8))){
             JsonArray jsonArray = gson.fromJson(br, JsonArray.class);
             for(JsonElement je : jsonArray) {
                 JsonObject jo = je.getAsJsonObject();
-                victims.add(jo.get("email").getAsString());
+                String email;
+                try{
+                    email = jo.get("email").getAsString();
+                }catch(RuntimeException ex){
+                    throw new RuntimeException("null values are not allowed! Fix it in victims.json");
+                }
+
+                if(!pattern.matcher(email).matches()){
+                    throw new RuntimeException("\"" + email +"\"" + " is an invalid email address! Fix it in victims.json");
+                }
+                victims.add(email);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -28,5 +41,9 @@ public class AddressReader {
     }
     public ArrayList<String> getVictims(){
         return victims;
+    }
+
+    public int getVictimsSize(){
+        return victims.size();
     }
 }
