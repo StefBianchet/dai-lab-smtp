@@ -1,14 +1,17 @@
 package ch.heig.dai.smtp;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 // tod
 public class MailManager {
     private final AddressReader addressReader;
+    private final MessageReader messageReader;
     private final int nbGroups;
     private final ArrayList<Group> groups = new ArrayList<>();
-    public MailManager(AddressReader addressReader, int nbGroups){
+    public MailManager(AddressReader addressReader, MessageReader messageReader, int nbGroups){
         this.addressReader = addressReader;
+        this.messageReader = messageReader;
         this.nbGroups = nbGroups;
     }
 
@@ -29,6 +32,14 @@ public class MailManager {
                 g = new Group(nbVictims, addressReader);
             }
             groups.add(g);
+        }
+    }
+
+    public void assignAMessagePerGroups(){
+        for (Group g:groups) {
+            int index = new Random().nextInt(messageReader.getMessageListSize());
+            Message msg = messageReader.getMessages().get(index);
+            g.setMessage(msg);
         }
     }
 

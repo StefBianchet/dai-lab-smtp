@@ -21,7 +21,7 @@
   },
   {
     "subject": "DAI grade for the SMTP lab",
-    "body": "hello,\nyou got a 6 on your DAI SMTP lab,\ncongratulations!"
+    "body": "Ehlo,\nyou got a 6 on your DAI SMTP lab,\ncongratulations!"
   },
   {
     "subject": "Help",

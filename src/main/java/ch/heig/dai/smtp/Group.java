@@ -6,6 +6,7 @@ public class Group {
     static int index = 0;
     private final ArrayList<String> victims = new ArrayList<>();
     private final int size;
+    private Message message;
 
     public Group(int nbVictims, AddressReader addressReader){
         this.size = nbVictims;
@@ -20,5 +21,13 @@ public class Group {
     }
     public int getGroupSize() {
         return size;
+    }
+
+    public void setMessage(Message message) {
+        this.message = message;
+    }
+
+    public Message getMessage() {
+        return message;
     }
 }
