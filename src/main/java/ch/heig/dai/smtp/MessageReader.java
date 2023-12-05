@@ -22,7 +22,7 @@ public class MessageReader {
 
     public MessageReader(){
         Gson gson = new Gson();
-        String filename = "/src/main/config/messages.json";
+        String filename = "/classes/messages.json";
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("").getAbsolutePath() + filename), StandardCharsets.UTF_8))){
             JsonArray jsonArray = gson.fromJson(br, JsonArray.class);
