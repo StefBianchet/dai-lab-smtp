@@ -70,12 +70,13 @@ Class diagram
 ----------
 
 Here's our class diagram
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="figures/classDiagramDark.png" />
-  <source media="(prefers-color-scheme: light)" srcset="figures/classDiagramLight.png" />
-  <img alt="class diagram" src="figures/classDiagramLight.png" width="50%" height="50%" style="max-width: 100%;" />
-</picture>
-
+<p align="left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="figures/classDiagramDark.png" />
+    <source media="(prefers-color-scheme: light)" srcset="figures/classDiagramLight.png" />
+    <img alt="class diagram" src="figures/classDiagramLight.png" width="50%" height="50%" style="max-width: 100%;" />
+  </picture>
+</p>
 
 Disclaimer
 ----------
