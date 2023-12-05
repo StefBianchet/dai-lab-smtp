@@ -20,7 +20,7 @@ public class ConfigReader {
     public ConfigReader(){
 
         Gson gson = new Gson();
-        String filename = "/classes/config.json";
+        String filename = "/src/main/config/config.json";
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("").getAbsolutePath() + filename), StandardCharsets.UTF_8))){
             JsonObject jsonObject   = gson.fromJson(br, JsonObject.class);

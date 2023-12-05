@@ -21,7 +21,7 @@ public class AddressReader {
 
     public AddressReader(){
         Gson gson = new Gson();
-        String filename = "/classes/victims.json";
+        String filename = "/src/main/config/victims.json";
         String regexPattern = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
         Pattern pattern = Pattern.compile(regexPattern);

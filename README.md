@@ -25,11 +25,20 @@ Setup
 There are 3 files in the `/src/main/config` directory:
 
 <ul>
-<li>config.json</li>
-<li>messages.json</li>
-<li>victims.json</li>
+<li>config.json
+    <ol>"address" is the server address</ol>
+    <ol>"port" is the port that the server is listening on</ol>
+    <ol>"number of groups" is the number of groups you want to make</ol>
+</li>
+<li>messages.json
+    <ol>Your messages must follow the format of the ones that are already in the file.</ol>
+</li>
+<li>victims.json
+    <ol>Add your "victims'" email addresses using the same format as the one already in the file</ol>
+</li>
 </ul>
 
+If you make mistakes in these files the program will not work and will tell you why with an error message.
 
 SMTP server
 -----------
@@ -46,6 +55,16 @@ Use docker to start the server:
 
 This provides a Web interface on localhost:1080 and a SMTP server on localhost:1025.
 
+How to run
+-----------
+
+<ol>
+    <li>Run the docker container or whatever SMTP server that you want to connect to.</li>
+    <li>Open your favorite terminal and go to the place where you cloned the repo</li>
+    <li>Run: mvn clean package</li>
+    <li>Run: java -jar target/dai-lab-smtp-1.0-jar-with-dependencies.jar</li>
+    <li>If you are using maildev you can go to localhost:1080 in your navigator to look at the emails that you sent</li>
+</ol>
 
 Class diagram
 ----------
