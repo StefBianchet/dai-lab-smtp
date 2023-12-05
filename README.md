@@ -3,9 +3,9 @@ MailPrankster : a prank email sender
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="figures/classDiagramDark.png">
-    <source media="(prefers-color-scheme: light)" srcset="figures/classDiagramLight.png">
-    <img alt="MailPrankster logo" src="figures/classDiagramDark.png" width="50%" height="50%" style="max-width: 100%;">
+    <source media="(prefers-color-scheme: dark)" srcset="figures/MailPranksterLogoDark.png">
+    <source media="(prefers-color-scheme: light)" srcset="figures/MailPranksterLogoLight.png">
+    <img alt="MailPrankster logo" src="figures/MailPranksterLogoLight.png" width="50%" height="50%" style="max-width: 100%;">
   </picture>
   <br/>
   <br/>
@@ -54,7 +54,7 @@ Here's our class diagram
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/classDiagramDark.png" />
   <source media="(prefers-color-scheme: light)" srcset="figures/classDiagramLight.png" />
-  <img alt="class diagram" src="figures/classDiagramDark.png" />
+  <img alt="class diagram" src="figures/classDiagramLight.png" width="50%" height="50%" style="max-width: 100%;" />
 </picture>
 
 
