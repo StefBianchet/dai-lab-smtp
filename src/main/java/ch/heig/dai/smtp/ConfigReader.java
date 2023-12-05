@@ -6,6 +6,12 @@ import com.google.gson.JsonObject;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+
+/**
+ * ConfigReader reads config parameters form a JSON file allowing MailPrankster to connect to the server
+ * @author Michael Strefeler
+ * @author Stefano Bianchet
+ */
 public class ConfigReader {
     private final int port;
     private final int nbGroups;

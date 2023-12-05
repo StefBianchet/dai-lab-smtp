@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ch.heig.dai.lab.smtp.Main</mainClass>
+                            <mainClass>ch.heig.dai.smtp.MailPrankster</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -31,12 +31,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>23.0.0</version>
-            <scope>compile</scope>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -45,3 +39,4 @@
         </dependency>
     </dependencies>
 </project>
+

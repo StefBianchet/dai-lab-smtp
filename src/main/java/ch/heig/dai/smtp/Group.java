@@ -2,6 +2,11 @@ package ch.heig.dai.smtp;
 
 import java.util.ArrayList;
 
+/**
+ * Group contains a group of victims for the MailPrankster
+ * @author Michael Strefeler
+ * @author Stefano Bianchet
+ */
 public class Group {
     static int index = 0;
     private final ArrayList<String> victims = new ArrayList<>();
@@ -22,11 +27,9 @@ public class Group {
     public int getGroupSize() {
         return size;
     }
-
     public void setMessage(Message message) {
         this.message = message;
     }
-
     public Message getMessage() {
         return message;
     }

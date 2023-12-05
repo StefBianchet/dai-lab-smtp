@@ -9,6 +9,14 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+/**
+ * MessageReader
+ * Reads the email messages from a JSON file using google.gson
+ * These email messages will be put in an ArrayList of Messages
+ * @author Stefano Bianchet
+ * @author Michael Strefeler
+ * @see Message
+ **/
 public class MessageReader {
     private final ArrayList<Message> messages = new ArrayList<>();
 

@@ -1,11 +1,3 @@
-package ch.heig.dai.smtp;
-
-import java.io.*;
-import java.net.Socket;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
-
 /*
 $$\      $$\           $$\ $$\ $$$$$$$\                               $$\                   $$\
 $$$\    $$$ |          \__|$$ |$$  __$$\                              $$ |                  $$ |
@@ -17,13 +9,35 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |$$ |      $$ |     \$$$$$$$ |$$ |  $$ |$$ | \$$\ 
 \__|     \__| \_______|\__|\__|\__|      \__|      \_______|\__|  \__|\__|  \__|\_______/    \____/  \_______|\__|
 */
 
+package ch.heig.dai.smtp;
+
+import java.io.*;
+import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+/**
+ * MailPrankster
+ * @author Stefano Bianchet
+ * @author Michael Strefeler
+ **/
 public class MailPrankster {
+
+    /**
+     * Main function that creates the "Client" that will send all the emails to the server
+     * @param args command line arguments. Not used here
+     */
     public static void main(String[] args) {
         System.out.println("Welcome to MailPrankster!");
         MailPrankster prankster = new MailPrankster();
         prankster.run();
     }
 
+    /**
+     * Function running the MailPrankster
+     * Gets the config from the JSON file, reads the email addresses, creates email groups and sends the emails
+     */
     private void run() {
         ConfigReader configReader = new ConfigReader();
         AddressReader addressReader = new AddressReader();
@@ -35,7 +49,6 @@ public class MailPrankster {
 
         mailManager.assignAMessagePerGroups();
         try (Socket socket = new Socket(configReader.getServerAddress(), configReader.getServerPort());
-            var in = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
             var out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8))) {
             System.out.println("Server connection successful!");
             out.write("EHLO MailPrankster\n");
@@ -60,7 +73,7 @@ public class MailPrankster {
                     }
                 }
                 out.write("\n");
-                out.write("SUBJECT: " + group.getMessage().subject() + "\n\n");;
+                out.write("SUBJECT: " + group.getMessage().subject() + "\n\n");
                 out.write(group.getMessage().body() + "\n");
                 out.write("\r\n.\r\n\n");
                 out.flush();

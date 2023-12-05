@@ -10,6 +10,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+
+/**
+ * AddressReader reads email addresses from a JSON file.
+ * @author Michael Strefeler
+ * @author Stefano Bianchet
+ */
 public class AddressReader {
     private final ArrayList<String> victims = new ArrayList<>();
 

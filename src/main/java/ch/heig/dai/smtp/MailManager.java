@@ -3,7 +3,11 @@ package ch.heig.dai.smtp;
 import java.util.ArrayList;
 import java.util.Random;
 
-// tod
+/**
+ * MailPrankster
+ * @author Stefano Bianchet
+ * @author Michael Strefeler
+ **/
 public class MailManager {
     private final AddressReader addressReader;
     private final MessageReader messageReader;
