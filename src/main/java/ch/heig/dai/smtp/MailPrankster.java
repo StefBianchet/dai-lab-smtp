@@ -50,6 +50,7 @@ public class MailPrankster {
                     out.write("RCPT TO: <" + group.getVictims().get(i) + ">\n");
                 }
                 out.write("DATA\n");
+                out.write("Content-Type: text/plain; charset=UTF-8\n");
                 out.write("FROM: <" + group.getVictims().get(0) + ">\n");
                 out.write("TO:");
                 for (int i = 1; i < group.getGroupSize(); i++){
