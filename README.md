@@ -1,31 +1,69 @@
 MailPrankster : a prank email sender
 =============
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="figures/classDiagramDark.png">
+    <source media="(prefers-color-scheme: light)" srcset="figures/classDiagramLight.png">
+    <img alt="MailPrankster logo" src="figures/classDiagramDark.png" width="50%" height="50%" style="max-width: 100%;">
+  </picture>
+  <br/>
+  <br/>
+</p>
 
-Deliverables
-------------
+<h3 align="center">
+    <p>State-of-the-art Prank email sender</p>
+</h3>
+
+📧 MailPrankster provides an easy way to send prank emails to a (mock) SMTP server 
+
+The main use of this program is educational purposes.
+
+Setup
+-----------
+
+There are 3 files in the `/src/main/config` directory:
+
+<ul>
+<li>config.json</li>
+<li>messages.json</li>
+<li>victims.json</li>
+</ul>
 
 
-Your repository should contain both the source code of your Java project and your report. Your report should be a single `README.md` file, located at the root of your repository. The images should be placed in a `figures` directory.
+SMTP server
+-----------
 
-Your report MUST include the following sections:
+We used [MailDev](https://github.com/maildev/maildev) as a mock SMTP server.  **Do not use a real SMTP server unless you actually want to prank people**.
 
-* **A brief description of your project**: if people exploring GitHub find your repo, without a prior knowledge of the API course, they should be able to understand what your repo is all about and whether they should look at it more closely.
+Make sure to run this command before running the program or the client won't be able to connect to the server.
 
-* **Instructions for setting up your mock SMTP server**. The user who wants to experiment with your tool but does not really want to send pranks immediately should be able to use a mock SMTP server.
+Disclaimer: you might have to change the code a bit to make it work with a real SMTP server<br>
 
-* **Clear and simple instructions for configuring your tool and running a prank campaign**. If you do a good job, an external user should be able to clone your repo, edit a couple of files and send a batch of e-mails in less than 10 minutes.
+Use docker to start the server:
 
-* **A description of your implementation**: document the key aspects of your code. It is a good idea to start with a **class diagram**. Decide which classes you want to show (focus on the important ones) and describe their responsibilities in text. It is also certainly a good idea to include examples of dialogues between your client and an SMTP server (maybe you also want to include some screenshots here).
+    docker run -d -p 1080:1080 -p 1025:1025 maildev/maildev
 
-References
+This provides a Web interface on localhost:1080 and a SMTP server on localhost:1025.
+
+
+Class diagram
 ----------
 
-* The [SMTP RFC](<https://tools.ietf.org/html/rfc5321#appendix-D>), and in particular the [example scenario](<https://tools.ietf.org/html/rfc5321#appendix-D>)
-* The [mailtrap](<https://mailtrap.io/>) online service for testing SMTP
-
+Here's our class diagram
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/classDiagramDark.png" />
   <source media="(prefers-color-scheme: light)" srcset="figures/classDiagramLight.png" />
   <img alt="class diagram" src="figures/classDiagramDark.png" />
 </picture>
+
+
+Disclaimer
+----------
+
+MailPrankster declines all responsibility of your actions when using our app!
+
+References
+----------
+
+* The [SMTP RFC](<https://tools.ietf.org/html/rfc5321#appendix-D>), and in particular the [example scenario](<https://tools.ietf.org/html/rfc5321#appendix-D>)
