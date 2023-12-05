@@ -39,16 +39,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/config</directory>
-                <includes>
-                    <include>*.json</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
-
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
